@@ -1,2 +1,2 @@
 About.tex
-Title.tex
+covering spaces.tex
