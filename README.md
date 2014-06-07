@@ -1,4 +1,5 @@
 alg-top-notes
 =============
 
-alg. top. notes (also testing integration with authorea)
+These notes are viewable online at
+[Authorea](https://authorea.com/users/7271).
