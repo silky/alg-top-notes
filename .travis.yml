@@ -1,0 +1,28 @@
+language: python
+python:
+ - "2.7"
+
+# stolen from - https://github.com/HoTT/book/blob/master/.travis.yml
+install:
+ - echo | sudo add-apt-repository ppa:texlive-backports/ppa
+ - sudo apt-get update -q
+ - sudo apt-get install -q texlive wget curl sed grep
+ - if [ ! -z "$LATEXMK" ]; then sudo apt-get install -q latexmk; fi
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/comment/comment.sty
+ - ./etc/ci/wget_retry.sh http://www.ctan.org/tex-archive/macros/latex/contrib/misc/nextpage.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/fonts/stmaryrd.zip && unzip stmaryrd && mv stmaryrd/*.{mf,dtx} ./ && latex stmaryrd.dtx
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/wallpaper/wallpaper.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/generic/xstring/xstring.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/generic/xstring/xstring.tex
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/enumitem/enumitem.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/mh.zip && unzip mh.zip && (cd mh && for i in *.dtx; do (mv $i ../ && cd .. && tex $i); done)
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/generic/diagrams/xypic.zip && unzip xypic.zip && mv xypic/*/* ./
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/etoolbox/etoolbox.def
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/etoolbox/etoolbox.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/titlesec.zip && unzip titlesec.zip && mv titlesec/*.{tss,sty,def} ./
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/braket/braket.sty
+ - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/supertabular/supertabular.dtx http://mirrors.ctan.org/macros/latex/contrib/supertabular/supertabular.ins && latex supertabular.ins
+
+script:
+ ./build_mainfile.py
+ latexmk alg-top-notes.tex -pdf
