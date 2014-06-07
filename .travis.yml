@@ -24,5 +24,4 @@ install:
  - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/supertabular/supertabular.dtx http://mirrors.ctan.org/macros/latex/contrib/supertabular/supertabular.ins && latex supertabular.ins
 
 script:
- ./build_mainfile.py
- latexmk alg-top-notes.tex -pdf
+ ./build_mainfile.py && latexmk alg-top-notes.tex -pdf

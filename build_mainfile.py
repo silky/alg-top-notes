@@ -25,6 +25,7 @@ def build_tex (filename):
 
     with open(filename, 'w') as f:
         f.write(tex)
+    print("Wrote to {}".format(filename))
 
 if __name__ == "__main__":
     full_dirname = os.path.dirname(os.path.realpath(__file__))
