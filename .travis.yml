@@ -7,7 +7,7 @@ install:
  - echo | sudo add-apt-repository ppa:texlive-backports/ppa
  - sudo apt-get update -q
  - sudo apt-get install -q texlive wget curl sed grep
- - if [ ! -z "$LATEXMK" ]; then sudo apt-get install -q latexmk; fi
+ - sudo apt-get install -q latexmk
  - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/macros/latex/contrib/comment/comment.sty
  - ./etc/ci/wget_retry.sh http://www.ctan.org/tex-archive/macros/latex/contrib/misc/nextpage.sty
  - ./etc/ci/wget_retry.sh http://mirrors.ctan.org/fonts/stmaryrd.zip && unzip stmaryrd && mv stmaryrd/*.{mf,dtx} ./ && latex stmaryrd.dtx
