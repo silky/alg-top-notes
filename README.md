@@ -5,6 +5,9 @@ alg-top-notes
 
 These notes are viewable online at [Authorea](https://authorea.com/users/7271).
 
+**Note**: These notes are out of date at the moment pending the resolution of
+some issues; more information can be found [here](https://github.com/OpenScienceWorkshops/OpenScienceWorkshops.github.io/issues/50).
+
 You can build this locally with
 
     ./build_mainfile.py && latexmk -pvc -pdf alg-top-notes.tex
