@@ -1,0 +1,118 @@
+\subsection{Basic Topology}
+\begin{defn}
+A topological space is a set $X$ together with a collection $\tau$
+of subsets called \emph{open sets }such that\end{defn}
+\begin{itemize}
+\item $\emptyset$ and $X$ are open
+\item Every union of open sets is open
+\item Every finite intersection of open sets is open
+\end{itemize}
+$\tau$ is called a \emph{topology} on $X$. Closed sets in $X$ are
+complements of open sets.
+\begin{defn}
+Let $X$ and $Y$ be topologial spaces and $f:X\to Y$ a function.
+Then $f$ is continuous if $f^{-1}(U)=\{x\in X\mid f(x)\in U\}$ is
+open in $X$ if $U$ is open in $Y$.
+\end{defn}
+
+\begin{defn}
+If $X$ is a topological space and $A\subseteq X$, then the \emph{subspace
+topology} on $A$ are the sets $U\cap A$ where $U$ open in $X$.
+\end{defn}
+
+\begin{defn}
+If $X,Y$ are topological spaces, then $X\times Y=\{(x,y)\mid x\in X,y\in Y\}$
+has a \emph{product toplogy}, where open sets in $X\times Y$ are
+unions of products $U\times V$ where $U$ open in $X$, $V$ open
+in $Y$.
+\end{defn}
+
+\begin{defn}
+A \emph{homeomorphism} between topological spaces $X$ and $Y$ is
+a continuos bijection $f:X\to Y$ whose inverse is also continuous.
+
+If such an $f$ exists we say that $X$ and $Y$ are \emph{homeomorphic:
+$X\approx Y$.}
+\end{defn}
+
+\begin{defn}
+A topological space $X$ is \emph{connected} if it is \emph{not} the
+disjoint union of two open subsets, i.e.
+
+\begin{align*}
+X & =A\sqcup B
+\end{align*}
+
+
+with $A,B$ open implies that either $A=\emptyset$ or $B=\emptyset$.
+
+Equivalently, a space $X$ is connected if the only subsets of $X$
+that are both open and closed are $X$ and $\emptyset$.\end{defn}
+\begin{thm}
+If $f:X\to Y$ is continuous and $X$ is connected then $f(X)$ is
+connected.
+\end{thm}
+
+\begin{thm}
+If $\{Y_{i}\}_{i}$ are connected sets in a topological space $X$,
+and $Y_{i}\cap Y_{j}\neq\emptyset$ for all $i,j$ then $\bigcup_{i}Y_{i}$
+is connected.
+
+Note: Any homeomorphism $f:X\to Y$ takes cut points of $X$ to cut
+points of $Y$.
+\end{thm}
+
+\begin{defn}
+A path in $X$ is a continuous map $\alpha:I\to X$. We say that $\alpha$
+joins $\alpha(0)$ to $\alpha(1)$.
+\end{defn}
+
+\begin{defn}
+A topological space $X$ is called \emph{Hausdorff} if given any two
+ppoints $x,y\in X$ with $x\neq y$, then there exists disjoint open
+sets $U$ and $V$ with $x\in U$, $y\in V$.
+\end{defn}
+
+\begin{defn}
+An $n$-dimensional manifold is a Hausdorff topological space which
+is locally homeomorphic to $\mathbb{R}^{n}$.
+\end{defn}
+
+\begin{defn}
+An \emph{open cover} of a topological space $X$ is a colelction of
+open sets whose union is $X$. A \emph{subcover} is a subset of this
+collection which still covers $X$.
+
+A topological space $X$ is called \emph{compact }if every open cover
+has a finite subcover. $A\subset X$ is compact if it is compact in
+the subspace topology.\end{defn}
+\begin{thm}
+~\end{thm}
+\begin{itemize}
+\item If $f:X\to Y$ is continuous and $X$ is compact, then $f(X)$ is
+compact.
+\item If $X$ compact, $A\subset X$ is closed, then $A$ is compact.\end{itemize}
+\begin{thm}
+(Heine-Borel) A subspace of $\mathbb{R}^{n}$ is compact iff it is
+closed and bounded.
+\end{thm}
+
+\begin{thm}
+Products of compact spaces are compact.
+\end{thm}
+
+
+Note: Compactness is a topological invariant.
+
+
+\begin{thm}
+If $X$ is a Hausdorff topological space, then every compact subset
+$A$ is closed.
+\end{thm}
+
+\begin{thm}
+If $f:X\to Y$ continuous, $X$ compact, $Y$ Hausdorff, then\end{thm}
+\begin{itemize}
+\item $f$ is a closed map.
+\item If $f$ is a bijection, then $f$ is a homeomorphism.
+\end{itemize}

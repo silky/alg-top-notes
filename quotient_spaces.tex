@@ -1,0 +1,214 @@
+\subsection{Quotient spaces}
+\begin{defn}
+Let $X$ be a topological space and $\sim$ an equivalence relation
+on $X$. ($a\sim a$, $a\sim b\Leftrightarrow b\sim a,a\sim b,b\sim c,a\sim c$.)
+Let $Y=X/\sim$ be the set of equivalence classes and define
+
+\begin{align*}
+\pi:X\to Y=X/\sim\\
+\pi(x)=[x]=\text{equiv class of \ensuremath{X}under \ensuremath{\sim}}
+\end{align*}
+
+
+then the quotient space $Y=X/\sim$ has a \emph{quotient topology}
+such that $V\subseteq X/\sim$ is open iff $\pi^{-1}(V)$ is open
+in $X$.
+
+Note: A continuous map $f:X\to Y$ is a \emph{quotient map} if $f$
+is onto and $U\subset Y$ is open $\Leftrightarrow$ $f^{-1}(U)$
+is open in $X$.
+\end{defn}
+
+\begin{thm}
+$g:X/\sim\to Z$ is continuous $\Leftrightarrow$ $g\circ\pi:X\to Z$
+is continuous.
+
+\begin{align*}
+\xymatrix{X\ar[r]^{g\circ\pi}\ar[d]_{\pi} & Z\\
+X/\sim\ar[ur]_{g}
+}
+\end{align*}
+\end{thm}
+\begin{cor}
+Let $f:X\to Z$ be a continuous map which is constant of equivalence
+classes (if $u\sim v$ then $f(u)=f(v)$), then $f$ induces a unique
+continuous map $\bar{f}:X/\sim\to Z$ such that $\bar{f}\circ\pi=f$.
+\end{cor}
+\begin{align*}
+\xymatrix{X\ar[r]^{f}\ar[d]_{\pi} & Z\\
+X/\sim\ar[ur]_{\bar{f}}
+}
+\end{align*}
+
+
+Note: $\pi:X\to X/\sim$ is continuous, so if $X$ is compact or connected
+or path connected, then so is $X/\sim$.
+\begin{thm}
+If $f:X\to Y$ continuous and onto, and\end{thm}
+\begin{itemize}
+\item $f$ is an open map, or
+\item $f$ is a closed map
+\end{itemize}
+then $Y\approx X/\sim$ where $x\sim y\Leftrightarrow f(x)=f(y)\forall x,y\in X$.
+\begin{defn}
+Let $X,Y$ be topological spaces. Two continuous maps $f,g:X\to Y$
+are \emph{homotopic} if there exists a continuous map $F:X\times I\to Y$
+such that $F(x,0)=f(x)$ and $F(x,1)=g(x)$ for all $x\in X$. We
+write $f\simeq g$ if $F$ exists, and say that $F$ is a homotopy
+from $f$ to $g$.\end{defn}
+\begin{thm}
+Homotopy is an equivalence relation on the set of all continuous maps
+$\{\text{cts maps}:X\to Y\}$ between spaces $X,Y$. I.e.\end{thm}
+\begin{itemize}
+\item $f\simeq f$
+\item If $f\simeq g\implies g\simeq f$
+\item If $f\simeq g$, $g\simeq h$, $\implies f\simeq h$.
+\end{itemize}
+Note: Let $X=A\cup B$, $A,B$ subspaces of $X$. Suppose $f:A\to Y$,
+$g:B\to Y$ are continuous maps such that $f(x)=g(x)$ $\forall x\in A\cap B$.
+Then define $h:A\cup B\to Y$ by 
+
+\begin{align*}
+h(x) & =\begin{cases}
+f(x) & x\in A\\
+g(x) & x\in B
+\end{cases}
+\end{align*}
+
+
+then $h$ is continuous if either
+\begin{itemize}
+\item $A,B$ are closed subsets
+\item $A,B$ are open subsets\end{itemize}
+\begin{defn}
+Let $f,g:X\to Y$ be continuous maps which agree on $A$. Then $f\simeq g$
+\emph{relative to $A$ }if there is a homotopy $F:f\to g$ which fixes
+all points in $A$. I.e. we have $F:X\times I\to Y$ with $F(x,0)=f(x)$
+$F(x,1)=g(x)$ and $\forall a\in A$ $F(a,t)=f(a)=g(a)$ $\forall t$.
+\end{defn}
+
+\begin{defn}
+A continuous map $f:X\to Y$ is a \emph{homotopy equivalence} if there
+exists a continuous map $g:Y\to X$ such that
+
+\begin{align*}
+g\circ f\simeq1_{X}:X\to X\\
+f\circ g\simeq1_{y}:Y\to Y
+\end{align*}
+
+
+we say that $X$ and $Y$ are homotopy equivalent of there exists
+such a map, and write $X\simeq Y$.
+\end{defn}
+
+\begin{defn}
+A topological space $X$ is \emph{contractible} if the identity map
+$\text{id}_{X}:X\to X$ is homotopic to a constant map $c:X\to X,c(x)=x_{0}$
+for all $x\in X$.
+
+Note/Exercise: $X$ contractible $\Leftrightarrow$ $X\simeq\{\text{pt}\}$.
+\end{defn}
+
+\begin{defn}
+Given $A$ a subspace of $X$, a \emph{(strong) deformation retraction}
+of $X$ onto $A$ is a homotopy rel $A$, $H:X\times I\to X$ such
+that $H_{0}=1_{X}$, $H_{1}:X\to A$. Then we have $A\simeq X$.
+\end{defn}
+
+\begin{defn}
+Let $\pi_{1}(X,x_{0})$ be a set of homotopy classes (rel endpoints)
+of loops in $X$ based at $x_{0}$ (with a suitably defined product.)
+This is the \emph{fundamental group of $X$ at $x_{0}$.}\end{defn}
+\begin{thm}
+If $X$ is path connected, then $\pi_{1}(X,x_{0})\cong\pi_{1}(X,x_{j})\forall x_{j}\in X$.
+\marginpar{Maybe add in the picture?}
+\end{thm}
+
+
+\textbf{Effects of continuous maps}
+
+Let $f:X\to Y$ be a continuous map. Then
+\begin{itemize}
+\item $\alpha$ a path in $X$ $\implies$ $f\circ\alpha=f\alpha$ is a
+path in $Y$
+\item $\alpha\sim\alpha'$ in $X\implies f\circ\alpha\sim f\circ\alpha'$
+in $Y$.
+\item $\alpha$ a loop at $x_{0}$ $\implies f\circ\alpha$ is a loop at
+$f(x_{0})$. So there is a well-defined function $f_{*}:\pi_{1}(X,x_{0})\to\pi_{1}(F,f(x_{0}))$
+given by $f_{*}([\alpha])=[f\circ\alpha]$.\end{itemize}
+\begin{thm}
+~\end{thm}
+\begin{enumerate}
+\item $f_{*}$ is a group homomorphism.
+\item If $f=\text{identity}=1_{X}:X\to X$ then the induced map is the identity
+map $f_{*}:\pi_{1}(X,x_{0})\to\pi_{1}(X,x_{0})$.
+\item $(f\circ g)_{*}=f_{*}\circ g_{*}$.\end{enumerate}
+\begin{cor}
+If $f:X\to Y$ is a homeomorphism, then $f_{*}:\pi_{1}(X,x_{0})\to\pi_{1}(Y,f(x_{0}))$
+is a group isomorphism. So the fundamental group is a topological
+invariant.\end{cor}
+\begin{thm}
+Let $f,g:X\to Y$ be homotopic maps via a homotopy $F:X\times I\to Y$.
+Let $\gamma:I\to Y$ be the path $\gamma(t):F(x_{0},t)$ traced out
+by the basepoint $x_{0}$ under $F$ and let $y_{0}:y(0)=F(x_{0},0)$,
+$y_{1}=y(1)=F(x_{0},1)$, then $g_{*}=\gamma_{*}\circ f_{*}$ where
+$\gamma_{*}([\alpha])=[\gamma^{-1}*\alpha*\gamma]=\text{change of base point isomorphism}$,
+i.e. the diagram
+
+\begin{align*}
+\xymatrix{\pi_{1}(X,x_{0})\ar[dr]_{g_{*}}\ar[r]^{f_{*}} & \pi_{1}(Y,y_{0})\ar[d]_{\gamma_{*}\cong}\\
+ & \pi_{1}(Y,y_{1})
+}
+\end{align*}
+
+
+commutes.
+
+Note: If $F$ does not move the basepoint $x_{0}$ then $\gamma_{*}=\text{id}$
+and $f_{*}=g_{*}$.\end{thm}
+\begin{lem}
+Let $G:I\times I\to Y$ be continuous and let $a,b:I\to I\times I$
+be paths such that $a(0)=b(0)$ and $a(1)=b(1)$. Then $G\circ a\cong G\circ b$
+rel endpoints.
+\end{lem}
+Application: If $f:X\to Y$ is a homotopy-equivalence then $f_{*}:\pi_{1}(X,x_{0})\to\pi_{1}(Y,f(x_{0}))$
+is an ismorphism for all $x_{0}\in X$. So homotopically-equivalence
+spaces has isomorphic fundamental groups.
+\begin{defn}
+$X$ is simply-connected if $X$ is path connected and $\pi_{1}(X,x_{0})\cong\{1\}$
+for all $x_{0}\in X$.\end{defn}
+\begin{lem}
+If $X\simeq Y$ then $X$ is path connected iff $Y$ is path connected.\end{lem}
+\begin{thm}
+Let $p_{1}:X\times Y\to X$ and $p_{2}:X\times Y\to Y$ be projection
+maps. Then $(p_{1*})\times(p_{2*}):\pi_{1}(X\times Y,(x_{0},y_{0}))\to\pi_{1}(X,x_{0})\times\pi_{1}(Y,y_{0})$
+is an isomorphism. Explicitly
+
+\begin{align*}
+p_{1*}\times p_{2*}([\alpha]) & =([p_{1}\circ\alpha],[p_{2}\circ\alpha])
+\end{align*}
+\end{thm}
+\begin{lem}
+(Homotopy lemma) If $\alpha_{0},\alpha_{1}:I\to S^{1}$ are paths
+such that $\alpha_{0}\simeq\alpha_{1}$ rel endpoints, then $\deg(\alpha_{0})=\deg(\alpha_{1})$.
+(Where we defined the degree to be that ``distance moved upwards'',
+i.e. $\tilde{\alpha}(1)$, where $\tilde{\alpha}$ is the lifted path. \end{lem}
+\begin{thm}
+(Fundamental theorem of algebra) Every non-constant polynomial with
+complex coefficients has a complex zero.
+
+Idea:\end{thm}
+\begin{enumerate}
+\item Let $f:B\to\mathbb{C}$ be continuous and defined on a closed 2-ball
+$B\approx B^{2}$. Assume $f(z)\neq0$ on the boundary, i.e. $\forall z\in\partial B\approx S^{1}$.
+Define $g:\partial B\to S^{1}$ by $g(z)=f(z)/|f(z)|$ (continuous).
+Then If $g_{*}:\pi_{1}(\partial B)\cong\mathbb{Z}\to\pi_{1}(S^{1})\cong\mathbb{Z}$
+is non-trivial $f$ has a zero inside $B$. (To prove this, try the
+contrapositive.)
+\item To prove FTA: Apply this result to $f(z)=z^{n}+a_{n-1}z^{n-1}+\cdots$
+and $B$ a sufficiently large ball of radius $r$ around the origin.\end{enumerate}
+\begin{thm}
+Any homeomorphism $B^{2}\to B^{2}$ takes $\partial B^{2}=S^{1}$
+to $S^{1}$. (Idea: Remove various points.)
+\end{thm}
+

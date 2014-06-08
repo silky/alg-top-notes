@@ -1,0 +1,39 @@
+\subsection{Cell complexes}
+\begin{defn}
+A CW complex is a Hausdorff space $X$ constructed as follows:\end{defn}
+\begin{enumerate}
+\item Start with $X^{0}=\{\text{discrete set of points}\}$.
+\item Form a graph $X^{n}$ from $X^{n-1}$ by attacheding n-cells via maps
+$\phi_{\alpha}:S^{n-1}\to X^{n-1}$. So $X^{n}=(X^{n-1}\sqcup B_{\alpha}^{n})/(x\sim\phi_{\alpha}(x)\forall x\in\partial B_{\alpha}^{n})$\\
+\\
+$X^{n}$ has the quotient topology defined by $q:X^{n-1}\sqcup B_{\alpha}^{n}\to X^{n}$,
+i.e. $U\subset X^{n}$ open iff $q^{-1}(U)$ open in $X^{n-1}\sqcup B_{\alpha}^{n}$.\\
+\\
+$X^{n}=\text{"n-skeleton"}=X^{n-1}\sqcup e_{\alpha}^{n}$ where $e_{\alpha}^{n}$
+is an open $n$-ball, i.e. the image of $\text{int}B_{\alpha}^{n}$
+under $q$.
+\item $X=X^{n}$ for finite integer $n$ or $X=\bigcup_{n=0}^{\infty}X^{n}$
+and $X$ has the ``weak topology''.
+\end{enumerate}
+Note: If $X$ is finite, we can define the Euler characteristic $\chi(X)=\sum_{i}(-1)^{i}(\text{\# of \ensuremath{i}-cells in \ensuremath{X})}$.
+The dimension of $X$ is the maximum dimension of the cells.
+
+Notes about CW complexs:
+\begin{itemize}
+\item $\chi(S^{2})=2$, $\chi(M_{g})=2-2g$, $\chi(N_{h})=2-h$.
+\item $S^{n}=e^{-0}\cup e^{n}$
+\item $\mathbb{R}P^{n}=\mathbb{R}P^{n-1}\cup(\text{open n-cell})=e^{0}\cup e^{1}\cup\cdots\cup e^{n}$.
+\item $\chi(\mathbb{R}P^{n})=1-1+1\dots=\begin{cases}
+1 & n\,\text{even}\\
+0 & n\,\text{odd}
+\end{cases}$
+\item $\mathbb{C}P^{n}=\mathbb{C}P^{n-1}\cup(\text{copy of \ensuremath{\mathbb{C}^{n})=}}e^{0}\cup e^{2}\cup\cdots\cup e^{2n}.$
+\item Products of finite CW complexes are CW complexes.\\
+\\
+Suppose $X=\bigcup_{\alpha}e_{\alpha},$ $Y=\bigcup_{\beta}e_{\beta}$,
+then $X\times Y=\bigcup_{\alpha,\beta}(e_{\alpha}\times e_{\beta})$
+has dimension $\dim(e_{\alpha})+\dim(e_{\beta})$. It's an exercise
+to show $\chi(X\times Y)=\chi(X)\cdot\chi(Y)$.\\
+\\
+Example: $S^{2}\times S^{2}=(e^{0}\cup e^{2})\times(e^{0}\cup e^{2})=e^{0}\times e^{0}\cup e^{0}\times e^{2}\cup e^{2}\times e^{0}\cup e^{2}\times e^{2}$.
+\end{itemize}
