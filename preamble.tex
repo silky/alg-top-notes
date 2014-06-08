@@ -13,5 +13,36 @@
 \bibliographystyle{plain}
 
 
+\makeatletter
+\theoremstyle{definition}
+\newtheorem{defn}{\protect\definitionname}
+
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+
+\theoremstyle{plain}
+\newtheorem{cor}{\protect\corollaryname}
+
+\theoremstyle{plain}
+\newtheorem{lem}{\protect\lemmaname}
+
+\theoremstyle{plain}
+\newtheorem{prop}{\protect\propositionname}
+
+\theoremstyle{plain}
+\newtheorem{fact}{\protect\factname}
+
+\theoremstyle{remark}
+\newtheorem{rem}{\protect\remarkname}
+
+\makeatother
+
 \usepackage{babel}
 
+\providecommand{\definitionname}{Definition}
+\providecommand{\factname}{Fact}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\theoremname}{Theorem}
