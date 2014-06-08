@@ -6,7 +6,7 @@ alg-top-notes
 These notes are viewable online at [Authorea](https://authorea.com/users/7271).
 
 **Note**: These notes are out of date at the moment pending the resolution of
-some issues; more information can be found [here](https://github.com/OpenScienceWorkshops/OpenScienceWorkshops.github.io/issues/50).
+some issues; more information can be found [here](https://github.com/OpenScienceWorkshops/OpenScienceWorkshops.github.io/issues/50) (well, actually, I could keep these up to date even if I didn't use Authorea, but because I'm not using Authorea I'm still using LyX, so that's secretly the reason these aren't up to date - because I'm not exporting from LyX all the time.)
 
 You can build this locally with
 
